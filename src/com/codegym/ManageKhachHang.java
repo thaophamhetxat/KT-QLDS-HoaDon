@@ -21,13 +21,16 @@ class ManagerKhachHang {
         System.out.println("Ngay ra hoa don");
         String ngayRaHoaDon = scanner.nextLine();
         System.out.println("So luong");
-        String soLuong = scanner.nextLine();
+        int soLuong = Integer.parseInt(scanner.nextLine());
         System.out.println("Don gia");
-        String donGia = scanner.nextLine();
+        int donGia = Integer.parseInt(scanner.nextLine());
 
 
         if (quocGiaKhachHang == "VietNam") {
-            return new VietNam(maKhachHang, hoTen, ngayRaHoaDon, soLuong, donGia);
+            int thanhTien = 0;
+            System.out.println("dinh muc");
+            int dinhMuc = Integer.parseInt(scanner.nextLine());
+            return new VietNam(maKhachHang, hoTen, ngayRaHoaDon, soLuong, donGia, dinhMuc);
         }
         if (quocGiaKhachHang == "NuocNgoai") {
             System.out.println("Quoc gia");
@@ -56,9 +59,36 @@ class ManagerKhachHang {
             }
         }
     }
-    public void sortMaKhachHang(){
-        Collections.sort(khachHang,sortKhachHang);
+
+    public void sortMaKhachHang() {
+        Collections.sort(khachHang, sortKhachHang);
     }
-//    public void searchMaKhach(){}
+
+
+
+
+    public  void edit(String index) {
+        for (KhachHang s : khachHang) {
+            if (s.getMaKhachHang().equals(index)) {
+                if (s instanceof VietNam) {
+                    System.out.println("ma khach hang");
+                    String maKhachHang = scanner.nextLine();
+                    System.out.println("Ho ten");
+                    String hoTen = scanner.nextLine();
+                    System.out.println("Ngay ra hoa don");
+                    String ngayRaHoaDon = scanner.nextLine();
+                    System.out.println("So luong");
+                    int soLuong = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Don gia");
+                    int donGia = Integer.parseInt(scanner.nextLine());
+                    ((VietNam) s).setMaKhachHang(maKhachHang);
+                    ((VietNam) s).setHoTen(hoTen);
+                    ((VietNam) s).setNgayRaHoaDon(ngayRaHoaDon);
+                    ((VietNam) s).setDonGia(donGia);
+                    ((VietNam) s).soLuong(soLuong);
+                }
+            }
+        }
+    }
 
 }

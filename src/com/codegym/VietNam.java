@@ -1,16 +1,20 @@
 package com.codegym;
 
-public class VietNam extends KhachHang{
+public class VietNam extends KhachHang {
+    int dinhMuc;
 
 
     public VietNam() {
+
+    }
+    public VietNam(int dinhMuc) {
+        this.dinhMuc = dinhMuc;
     }
 
-
-    public VietNam(String maKhachHang, String hoTen, String ngayRaHoaDon, String soLuong, String donGia) {
-        super(maKhachHang, maKhachHang, hoTen, ngayRaHoaDon, soLuong, donGia);
+    public VietNam(String maKhachHang, String hoTen, String ngayRaHoaDon, int soLuong, int donGia, int dinhMuc) {
+        super(maKhachHang, hoTen, ngayRaHoaDon, soLuong, donGia);
+        this.dinhMuc = dinhMuc;
     }
-
 
     @Override
     public String toString() {
@@ -19,7 +23,11 @@ public class VietNam extends KhachHang{
                 ", hoTen='" + hoTen + '\'' +
                 ", ngayRaHoaDon='" + ngayRaHoaDon + '\'' +
                 ", soLuong='" + soLuong + '\'' +
-                ", donGia='" + donGia + '\'' + '\'' +
+                ", donGia=" + donGia +
+                ", dinhMuc=" + dinhMuc +
                 '}';
+    }
+
+    public void soLuong(int soLuong) {
     }
 }

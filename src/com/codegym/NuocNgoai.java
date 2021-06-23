@@ -1,6 +1,6 @@
 package com.codegym;
 
-public class NuocNgoai extends KhachHang{
+public class NuocNgoai extends KhachHang {
     String quocGia;
 
     public NuocNgoai() {
@@ -10,18 +10,11 @@ public class NuocNgoai extends KhachHang{
         this.quocGia = quocGia;
     }
 
-    public NuocNgoai(String maKhachHang, String hoTen, String ngayRaHoaDon, String soLuong, String donGia, String quocGia) {
-        super(maKhachHang, maKhachHang, hoTen, ngayRaHoaDon, soLuong, donGia);
+    public NuocNgoai(String maKhachHang, String hoTen, String ngayRaHoaDon, int soLuong, int donGia, String quocGia) {
+        super(maKhachHang, hoTen, ngayRaHoaDon, soLuong, donGia);
         this.quocGia = quocGia;
     }
 
-    public String getQuocGia() {
-        return quocGia;
-    }
-
-    public void setQuocGia(String quocGia) {
-        this.quocGia = quocGia;
-    }
 
     @Override
     public String toString() {

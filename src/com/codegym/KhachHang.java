@@ -4,19 +4,24 @@ public class KhachHang {
     String maKhachHang;
     String hoTen;
     String ngayRaHoaDon;
-    String soLuong;
-    String donGia;
+    int soLuong;
+    int donGia;
 
     public KhachHang() {
     }
 
-    public KhachHang(String khachHang, String maKhachHang, String hoTen, String ngayRaHoaDon, String soLuong, String donGia) {
+    public KhachHang(String maKhachHang, String hoTen, String ngayRaHoaDon, int soLuong, int donGia) {
         this.maKhachHang = maKhachHang;
         this.hoTen = hoTen;
         this.ngayRaHoaDon = ngayRaHoaDon;
         this.soLuong = soLuong;
         this.donGia = donGia;
+    }
 
+
+
+    public void setDonGia(int donGia) {
+        this.donGia = donGia;
     }
 
     public String getMaKhachHang() {
@@ -43,20 +48,16 @@ public class KhachHang {
         this.ngayRaHoaDon = ngayRaHoaDon;
     }
 
-    public String getSoLuong() {
+    public int getSoLuong() {
         return soLuong;
     }
 
-    public void setSoLuong(String soLuong) {
+    public void setSoLuong(int soLuong) {
         this.soLuong = soLuong;
     }
 
-    public String getDonGia() {
+    public int getDonGia() {
         return donGia;
-    }
-
-    public void setDonGia(String donGia) {
-        this.donGia = donGia;
     }
 
     @Override
@@ -66,7 +67,7 @@ public class KhachHang {
                 ", hoTen='" + hoTen + '\'' +
                 ", ngayRaHoaDon='" + ngayRaHoaDon + '\'' +
                 ", soLuong='" + soLuong + '\'' +
-                ", donGia='" + donGia + '\'' +
+                ", donGia=" + donGia +
                 '}';
     }
 }

@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Main {
     static Scanner scanner = new Scanner(System.in);
     static ManagerKhachHang managerKhachHang = new ManagerKhachHang();
-    private static Object VietNam;
+    static SortKhachHang sortKhachHang = new SortKhachHang();
+
 
     public static void main(String[] args) {
         menu();
@@ -50,10 +51,19 @@ public class Main {
                     managerKhachHang.searchName();
                     break;
                 case 6:managerKhachHang.sortMaKhachHang();break;
+                case 2:{
+                    System.out.println("enter fix");
+                    String index = scanner.nextLine();
+                    managerKhachHang.edit(index);break;
+                }
+                case 5:{
+
+                }
 
 
             }
         }
     }
+
 }
 
